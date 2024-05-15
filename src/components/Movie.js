@@ -13,6 +13,7 @@ function Movie({ id, medium_cover_image, title, year, summary, genres }) {
         </Link>
       </h2>
       <h3>testing source tree.</h3>
+      <h2>i like this</h2>
       <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
       <ul className={styles.movie__genres}>
         {genres.map((g) => (
