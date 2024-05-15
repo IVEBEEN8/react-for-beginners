@@ -1,20 +1,23 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import styles from "./Movie.module.css";
 
 function Movie({ id, medium_cover_image, title, year, summary, genres }) {
   return (
-    <div className={styles.movie}>
-      <img src={medium_cover_image} className={styles.movie__img} />
-      <h2 className={styles.movie__title}>
+    <div>
+      <img src={medium_cover_image} />
+      <h2>
         <Link to={`/detail/${id}`}>
-          {title}
-          <span className={styles.movie__year}>({year})</span>
+          {title}({year})
         </Link>
       </h2>
+<<<<<<< HEAD:src/components/Movie.js
       <h3>testing source tree.</h3>
       <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
       <ul className={styles.movie__genres}>
+=======
+      <p>{summary}</p>
+      <ul>
+>>>>>>> parent of 9aed9d3 ([commit] test):src/routes/Movie.js
         {genres.map((g) => (
           <li key={g}>{g}</li>
         ))}
